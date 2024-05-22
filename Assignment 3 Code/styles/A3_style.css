@@ -1,0 +1,701 @@
+@font-face {
+    font-family: 'ReMachine';
+    src:url(../assets/PermanentMarker-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'KodeMono';
+    src:url(../assets/KodeMono-VariableFont_wght.ttf)
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src:url(../assets/Poppins-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'PoetsenOne';
+    src:url(../assets/PoetsenOne-Regular.ttf)
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src:url(../assets/PlusJakartaSans-Light.ttf)
+}
+
+
+html, body {
+    overflow-x: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+/************ NAVBAR STYLE ************/
+
+.navbar {
+    top: 0px;
+    margin: 0;
+    width: 98%;
+    height: 100px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 600;
+    background-color: white;
+    z-index: 9;
+    position: sticky;
+    
+}
+
+
+.navbar:not(.nectar) {
+    font-family: 'KodeMono';
+    font-weight: 600;
+    z-index: 9;
+    
+    
+}
+
+
+
+.nectar_nav_container {
+    height: 200px;
+    width: 220px;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nectar_nav_container img {
+    width: 100%;
+    height: 100%;
+}
+
+.product_range_link:hover {
+    font-weight:bolder;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.stockists_link:hover {
+    font-weight:bolder;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.about_link:hover {
+    font-weight:bolder;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.contact_link:hover {
+    font-weight:bolder;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.navbar-logo {
+    position: absolute;
+    height: 1750px;
+    width: 175px;
+    left: 0px;
+    top: 120px;
+}
+
+.navbar-logo img {
+    width: 100%;
+    
+    
+}
+
+
+/********* HEADER STYLING *************/
+
+.header_container {
+    top: 120px;
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+
+    /*Setting up grid*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    align-items: center;
+    text-align: center;
+    background-image: url("../assets/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /*img credit Photo by Kindel Media: https://www.pexels.com/photo/variety-of-fruit-drinks-on-mason-jar-8181548/ */
+}
+
+
+
+.nectar {
+    font-family: 'ReMachine';
+    font-size: 12.5rem;
+    font-weight: bold;
+    /*background-color: #04D976;*/
+    padding: 20px;
+    text-shadow: -5px 5px 0px #000000;
+    color: #3b9d06;
+}
+
+.header-info-container {
+    width: 700px;
+    background-color: #f8e61b;
+    padding: 5%;
+}
+
+.info-header {
+    margin-bottom: 2%;;
+    font-size: 4rem;
+    font-family: 'PoetsenOne';
+}
+
+.header-info {
+    font-size: 32px;
+    line-height: 1.5;
+    font-family: 'Poppins';
+}
+
+/************* BELOW HEADER PARAGRAPH *********************/
+
+.below-header-text {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.below-header-text span {
+    font-size: 2rem;
+    margin: 0 5px;
+    color: #3b9d06;
+}
+
+.bht1 {
+    font-family: 'ReMachine';
+}
+
+.bht2 {
+    font-family: 'KodeMono';
+}
+
+.bht3 {
+    font-family:'PoetsenOne';
+}
+
+.bhtp {
+    margin: 10px auto;
+    width: 60%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+
+/***************** PRODUCT RANGE **********************/
+.product-range-container {
+    width: 100%;
+    height: 1200px;
+    padding-bottom: 50px;
+    background-color: antiquewhite;
+
+    /* Grid set up */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20%;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.product-range-header{
+    order: 1;
+    grid-column: 1/13;
+    margin: none !important;
+    font-family: 'ReMachine';
+    font-size: 4rem;
+    font-weight: 600;
+    color: #3b9d06;
+    text-shadow: -5px 5px 0px #000000;
+}
+
+.product-header {
+    font-family: 'KodeMono';
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+/* Styling for the product divs */
+.product {
+    height: 420px;
+    box-shadow: -10px 8px 7px #c5c5c5;
+}
+
+.product:hover {
+    animation: tilt-shaking 0.45s ;
+    cursor: pointer;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+.product-range-images {
+    width: 90%;
+    height: 350px;
+    padding: 5%;
+    
+}
+
+.product-range-images img {
+    width: 100%;
+    height: 350px;
+}
+
+
+/* p(x) is a class name to define where the elements sit in the grid. Other styling will be done in speparate classes*/
+.p1 {
+    grid-column: 3 / 5;
+    order: 2;
+}
+
+.p2 {
+    grid-column: 5 / 7;
+    order: 3;
+}
+
+.p3 {
+    grid-column: 7 / 9;
+    order: 4;
+}
+
+.p4 {
+    grid-column: 9 / 11;
+    order: 5;
+}
+
+.p5 {
+    grid-column: 5 / 7;
+    order: 6;
+}
+
+.p6 {
+    grid-column: 7 / 9;
+    order: 7;
+}
+
+
+/************* STOCKISTS STYLING **********************/
+.stockists-container {
+    height: 70vh;
+    align-items: center;
+    text-align: center;
+
+
+    /*Grid Set Up */
+    display: grid;
+    grid-template-columns: .5fr 2fr 2fr 2fr .5fr;
+    grid-template-rows: 1fr .3fr 2fr .3fr;
+
+}
+
+.stockists-header {
+    grid-column: 1 / 6;
+    font-family: 'ReMachine';
+    font-size: 4rem;
+    font-weight: 600;
+    color: #3b9d06;
+    text-shadow: -5px 5px 0px #000000;
+}
+
+.stockists-subheader {
+    grid-column: 1 / 6;
+    font-size: 1.5rem;
+    letter-spacing: 2;
+    font-family: 'KodeMono';
+}
+
+.stockist1 {
+    grid-column: 2 / 3;
+}
+
+.stockist2 {
+    grid-column: 3 / 4;
+}
+
+.stockist3 {
+    grid-column: 4 / 5;
+}
+
+.stockists-disclaimer {
+    grid-column: 1 / 6;
+    font-family: 'Plus Jakarta Sans';
+}
+
+.stockists-img-container {
+    max-height: 200px;
+    width: 475px;
+    padding: 5%;
+    margin: 0 6px;
+    /*box-shadow: -10px 5px 7px #c7c7c7;*/
+
+}
+
+.stockists-img-container img {
+    width: 100%;
+    max-height: 200px;
+}
+
+/*********** ABOUT STYLING *************/
+.about-container {
+    height: 100%;
+    text-align: center;
+    align-items: center;
+
+    background-color: #91d2d4;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: .5fr 4fr;
+}
+
+.about-header {
+    grid-column: 1 / 5;
+    order: 1;
+    font-family: 'ReMachine';
+    font-size: 4rem;
+    font-weight: 600;
+    color: #3b9d06;
+    text-shadow: -5px 5px 0px #000000;
+}
+
+.about-img-container {
+    height: 80%;
+    width: 80%;
+    grid-column: 2 / 3;
+    order: 2;
+    margin-left: 200px;
+    box-shadow: 10px 8px 7px #5a5757;
+}
+
+.about-img-container img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.story-text {
+    grid-column: 3 / 4;
+    order: 3;
+
+    padding: 50px;
+    box-shadow: 10px 8px 7px #5a5757;
+
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Poppins';
+}
+
+.once {
+    font-size: 3rem;
+    font-family: 'PoetsenOne';
+}
+
+/*************** CONTACT STYLING *********/
+
+.contact-container {
+    width: 100%;
+    height: 58vh;
+    font-size: 1.4rem;
+    padding-top: 4vh;
+
+    text-align: center;
+}
+
+.contact-email {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'KodeMono';
+}
+
+.img-gallery {
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.contact-img-gallery-img-container {
+    height: 100%;
+    width: 100%;
+    background-color: #5a5757;
+    overflow: hidden;
+}
+
+.contact-img-gallery-img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.ci1 {
+    grid-column: 1 / 2;
+    order: 1;
+}
+
+.ci2 {
+    grid-column: 2 / 3;
+    order: 2;
+}
+
+.ci3 {
+    grid-column: 3 / 4;
+    order: 3;
+}
+
+.ci4 {
+    grid-column: 4 / 5;
+    order: 4;
+}
+
+.ci5 {
+    grid-column: 5 / 6;
+    order: 5;
+}
+
+
+
+/**************** MOBILE STYLING ******************/
+
+@media screen and (max-width: 393px) and (max-height: 852px) {
+    .navbar {
+        max-width: 98vw;
+        padding: 10px 0;
+        display: none;
+    }
+
+
+    .header_container {
+        text-align: center;
+        max-height: 65vh;
+        max-width: 100vw;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Turning off the Shop Now header div for mobile view*/
+    .header-info-container {
+        display: none;
+    }
+
+    .nectar-header-container {
+        
+        grid-column: 1 / 2;
+        padding: 0;
+    }
+
+    .nectar {
+        font-size: 70px;
+        padding: 0;
+    }
+
+    .below-header-text {
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .bhtp {
+        font-size: 14px;
+        min-width: 90vw;
+        max-width: 90vw;
+        margin: auto;
+        line-height: 1;
+    }
+
+    .product-range-container {
+        padding: 30px 0;
+        max-height: 750px;
+        grid-template-rows: 65px 320px 320px;
+    }
+
+    .product-range-header {
+        font-size: 45px;
+    }
+
+    .product {
+        max-height: 320px;
+        padding: 4.5px;
+        margin-bottom: 15px;
+    }
+
+    .product-range-images {
+        max-height: 280px;
+    }
+
+    .product-range-images img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .p1 {
+        grid-column: 1/ 7;
+    }
+
+    .p2 {
+        grid-column: 7/ 13;
+    }
+
+    .p3 {
+        grid-column: 1/ 7;
+    }
+
+    .p4 {
+        grid-column: 7/ 13;
+    }
+
+    .p5, .p6 {
+        display: none;
+    }
+
+    .stockists-container {
+        height: 100%;
+        align-items: center;
+        padding: 15px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .stockists-header {
+        width: 100vw;
+        grid-column: 1 / 3;
+        order: 1;
+        font-size: 45px;
+        
+    }
+
+    .stockists-subheader {
+        width: 100vw;
+        grid-column: 1 / 3;
+        order: 2;
+        font-size: 16px;
+        padding: 16px 0;
+    }
+
+    .stockists-img-container {
+        max-width: 80vw;
+    }
+
+    .stockists-img-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .stockist1 {
+        width: 100vw;
+        grid-column: 1 / 3;
+        order: 3;
+    }
+
+    .stockist2 {
+        width: 100vw;
+        grid-column: 1 / 3;
+        order: 4;
+    }
+
+    .stockist3 {
+        width: 100vw;
+        grid-column: 1 / 3;
+        order: 5;
+    }
+
+    .stockists-disclaimer {
+        width: 100%vw;
+        grid-column: 1 / 3;
+        order: 6;
+        font-size: 10px;
+    }
+
+    .about-container {
+        max-width: 100vw;
+        overflow: hidden;
+        background-color: antiquewhite;
+        grid-template-rows: 50px 1fr;
+    }
+
+    .about-img-container {
+        display: none;
+    }
+
+    .story-text {
+        grid-column: 1 / 5;
+        
+        box-shadow: none;
+        padding: 15px;
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .once {
+        font-size: 25px;
+        color:#91d2d4;
+    }
+
+    .about-header {
+        font-size: 45px;
+    }
+
+    .contact-container {
+        width: 100vw;
+    }
+
+    .contact-container p {
+        font-size: 16px;
+    }
+
+    .contact-email {
+        font-size: 20px;
+    }
+
+    .ci1 {
+        grid-column: 1 / 4;
+    }
+
+    .ci2 {
+        grid-column: 4 / 6 ;
+    }
+
+    .ci4 {
+        grid-column: 1 / 3;
+    }
+
+    .ci5 {
+        grid-column: 3 / 6;
+    }
+
+    .ci3 {
+        display: none;
+    }
+
+
+}
